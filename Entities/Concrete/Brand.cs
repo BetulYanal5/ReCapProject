@@ -7,7 +7,7 @@ namespace Entities.Concrete
 {
     public class Brand:IEntity//Sen bir veri tabanı nesnesisin şeklinde işaretlendi
     {
-        public int Id { get; set; }
+        public int BrandId { get; set; }
         public string BrandName { get; set; }
     }
 }
