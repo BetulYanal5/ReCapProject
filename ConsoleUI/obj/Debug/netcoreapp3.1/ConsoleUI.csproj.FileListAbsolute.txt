@@ -58,3 +58,5 @@ C:\Users\Betul\source\repos\ReCapProject\ConsoleUI\obj\Debug\netcoreapp3.1\Conso
 C:\Users\Betul\source\repos\ReCapProject\ConsoleUI\obj\Debug\netcoreapp3.1\ConsoleUI.dll
 C:\Users\Betul\source\repos\ReCapProject\ConsoleUI\obj\Debug\netcoreapp3.1\ConsoleUI.pdb
 C:\Users\Betul\source\repos\ReCapProject\ConsoleUI\obj\Debug\netcoreapp3.1\ConsoleUI.genruntimeconfig.cache
+C:\Users\Betul\source\repos\ReCapProject\ConsoleUI\bin\Debug\netcoreapp3.1\Core.dll
+C:\Users\Betul\source\repos\ReCapProject\ConsoleUI\bin\Debug\netcoreapp3.1\Core.pdb

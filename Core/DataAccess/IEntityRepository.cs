@@ -1,10 +1,10 @@
-﻿using Entities.Abstract;
+﻿using Core.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq.Expressions;
 using System.Text;
 
-namespace DataAccess.Abstract
+namespace Core.DataAccess
 {
     //Generic Constraint
     //class : referans tip
@@ -14,7 +14,6 @@ namespace DataAccess.Abstract
     {
         List<T> GetAll(Expression<Func<T,bool>> filter=null);//Bu Metod ürünlerin hepsini listele anlamına gelir, filtreleme şart değildir
         T Get(Expression<Func<T, bool>> filter);//Burada ise filtreleme yaparız ve ürünler o filtreye göre sıralanır
-        //List<T> GetById(int Id);
         void Add(T entity);
         void Delete(T entity);
         void Update(T entity);

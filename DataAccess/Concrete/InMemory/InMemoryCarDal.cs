@@ -1,5 +1,6 @@
 ﻿using DataAccess.Abstract;
 using Entities.Concrete;
+using Entities.DTOs;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -51,6 +52,11 @@ namespace DataAccess.Concrete.InMemory
         public List<Car> GetById(int Id)//Buranın kategori olduğunu düşünelim kullanıcı sitede hangi kategoriye tıklarsa
         {                               //O kategorinin Id'si bulunur ve o kategorideki tüm ürünler listelenir
             return _cars.Where(c => c.Id == Id).ToList();
+        }
+
+        public List<CarDetailDto> GetCarDetails()
+        {
+            throw new NotImplementedException();
         }
 
         public void Update(Car car)//Ekrandan gelen data
