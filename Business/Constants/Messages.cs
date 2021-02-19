@@ -12,5 +12,6 @@ namespace Business.Constants
         public static string Updated = "Bilgiler güncellendi";
         public static string Listed = "Listelendi";
         public static string MaintenanceTime = "Sistem bakımda";
+        public static string RentalError = "Araç şu anda kullanımda olduğu için kiralanamaz";
     }
 }

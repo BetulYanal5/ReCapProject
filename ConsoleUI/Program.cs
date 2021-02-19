@@ -1,4 +1,5 @@
 ﻿using Business.Concrete;
+using Business.Constants;
 using DataAccess.Concrete.EntityFramework;
 using DataAccess.Concrete.InMemory;
 using Entities.Concrete;
@@ -19,19 +20,34 @@ namespace ConsoleUI
             {
                 Console.WriteLine($"{car.Id}\t{car.ColorId}\t\t{car.CarName}\t\t{car.BrandId}\t\t{car.ModelYear}\t\t{car.DailyPrice}\t\t{car.Description}");
             }
-            var sonuc = carManager.GetCarDetails();
-            foreach (var c in sonuc.Data)
-            {
-                if (sonuc.Success)
-                {
-                    Console.WriteLine(c.BrandName+" "+c.CarName+" "+c.ColorName+" "+c.DailyPrice);
-                    Console.WriteLine(sonuc.Message);
-                }
-                else
-                {
-                    Console.WriteLine(sonuc.Message);
-                }
-            }
+            //var sonuc = carManager.GetCarDetails();
+            //foreach (var c in sonuc.Data)
+            //{
+            //    if (sonuc.Success)
+            //    {
+            //        Console.WriteLine(c.BrandName+" "+c.CarName+" "+c.ColorName+" "+c.DailyPrice);
+            //        Console.WriteLine(sonuc.Message);
+            //    }
+            //    else
+            //    {
+            //        Console.WriteLine(sonuc.Message);
+            //    }
+            RentalManager rentalManager = new RentalManager(new EfRentalDal());
+            DateTime rentDate, returnDate;
+            int carId = 0, customerId = 0;
+            Console.WriteLine("Kiralamak istediğiniz aracın Id değerini giriniz.");
+            carId = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Aracı kiralamak isteyen müşterinin Id değerini giriniz.");
+            customerId = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Başlangıç tarihini giriniz.");
+            rentDate = DateTime.Parse(Console.ReadLine());
+            Console.WriteLine("Bitiş tarihini giriniz.");
+            returnDate = DateTime.Parse(Console.ReadLine());
+            Rental rental = new Rental { CarId = carId, CustomerId = customerId, RentDate = rentDate, ReturnDate = returnDate };
+            rentalManager.Add(rental);
+            Console.WriteLine(Messages.Added);
+
+            
             //Console.WriteLine("Araç eklemek için 1'i tuşlayın");
             //Console.WriteLine("Araç silmek için 2'yi tuşlayın");
             //Console.WriteLine("Tüm markaları görmek için 3'ü tuşlayın");

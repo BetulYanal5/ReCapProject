@@ -29,7 +29,7 @@ namespace Business.Concrete
             return new SuccessResult(Messages.Deleted);
         }
 
-        public IDataResult<List<Brand>> GetAllBrands()
+        public IDataResult<List<Brand>> GetAll()
         {
             if (DateTime.Now.Hour == 22)
             {
@@ -41,7 +41,7 @@ namespace Business.Concrete
             } 
         }
 
-        public IDataResult<Brand> GetBrandsById(int id)
+        public IDataResult<Brand> GetById(int id)
         {
             return new SuccessDataResult<Brand>(_brandDal.Get(b => b.BrandId == id));
         }
