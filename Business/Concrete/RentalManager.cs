@@ -24,7 +24,7 @@ namespace Business.Concrete
                 Console.WriteLine(Messages.RentalTimeError);
                 return new ErrorResult(Messages.RentalTimeError);
             }
-            if ((_rentalDal.Get(c => c.CarId == entity.CarId)) == null)//Kiralanan arabalar listesinde yoksa direkt kiralayabiliriz
+            if ((_rentalDal.Get(c => c.CarId == entity.CarId)) == null)//Kiralamak istenilen araba kiralanan arabalar listesinde yoksa direkt kiralayabiliriz
             {
                 _rentalDal.Add(entity);
                 Console.WriteLine(Messages.Added);
@@ -44,8 +44,7 @@ namespace Business.Concrete
                         }
                     }
                 }
-                //Eğer araç geri verilmediyse o aracı kiralayamayız       
-                Console.WriteLine(Messages.RentalError);
+                Console.WriteLine(Messages.RentalError);//Araç kiranlandığı için teslim edilmeden o aracı kiralayamayız
                 return new ErrorResult(Messages.RentalError);
             }
         }
