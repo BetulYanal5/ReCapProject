@@ -32,7 +32,7 @@ namespace Business.Concrete
 
         public IDataResult<List<Customer>> GetAll()
         {
-            return new SuccessDataResult<List<Customer>>(Messages.Listed);
+            return new SuccessDataResult<List<Customer>>(_customerDal.GetAll(),Messages.Listed);
         }
 
         public IDataResult<Customer> GetById(int Id)

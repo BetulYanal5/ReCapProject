@@ -57,7 +57,7 @@ namespace Business.Concrete
 
         public IDataResult<List<Rental>> GetAll()
         {
-            return new SuccessDataResult<List<Rental>>(Messages.Listed);
+            return new SuccessDataResult<List<Rental>>(_rentalDal.GetAll(),Messages.Listed);
         }
 
         public IDataResult<Rental> GetById(int Id)
