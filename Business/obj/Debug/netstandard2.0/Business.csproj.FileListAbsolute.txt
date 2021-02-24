@@ -1,7 +1,6 @@
 C:\Users\Betul\source\repos\ReCapProject\Business\obj\Debug\netstandard2.0\Business.csprojAssemblyReference.cache
 C:\Users\Betul\source\repos\ReCapProject\Business\obj\Debug\netstandard2.0\Business.AssemblyInfoInputs.cache
 C:\Users\Betul\source\repos\ReCapProject\Business\obj\Debug\netstandard2.0\Business.AssemblyInfo.cs
-C:\Users\Betul\source\repos\ReCapProject\Business\obj\Debug\netstandard2.0\Business.csproj.CoreCompileInputs.cache
 C:\Users\Betul\source\repos\ReCapProject\Business\bin\Debug\netstandard2.0\Business.deps.json
 C:\Users\Betul\source\repos\ReCapProject\Business\bin\Debug\netstandard2.0\Business.dll
 C:\Users\Betul\source\repos\ReCapProject\Business\bin\Debug\netstandard2.0\Business.pdb
