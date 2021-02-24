@@ -14,6 +14,19 @@
           "lib/netstandard2.1/Autofac.dll": {}
         }
       },
+      "Autofac.Extensions.DependencyInjection/7.1.0": {
+        "type": "package",
+        "dependencies": {
+          "Autofac": "6.0.0",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "2.1.0"
+        },
+        "compile": {
+          "lib/netstandard2.1/Autofac.Extensions.DependencyInjection.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.1/Autofac.Extensions.DependencyInjection.dll": {}
+        }
+      },
       "Autofac.Extras.DynamicProxy/6.0.0": {
         "type": "package",
         "dependencies": {
@@ -46,6 +59,15 @@
         },
         "runtime": {
           "lib/netstandard1.5/Castle.Core.dll": {}
+        }
+      },
+      "FluentValidation/9.5.1": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/FluentValidation.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/FluentValidation.dll": {}
         }
       },
       "Microsoft.Bcl.AsyncInterfaces/1.1.1": {
@@ -1548,7 +1570,8 @@
           "Autofac": "6.1.0",
           "Autofac.Extras.DynamicProxy": "6.0.0",
           "DataAccess": "1.0.0",
-          "Entities": "1.0.0"
+          "Entities": "1.0.0",
+          "FluentValidation": "9.5.1"
         },
         "compile": {
           "bin/placeholder/Business.dll": {}
@@ -1561,6 +1584,10 @@
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
+          "Autofac": "6.1.0",
+          "Autofac.Extensions.DependencyInjection": "7.1.0",
+          "Autofac.Extras.DynamicProxy": "6.0.0",
+          "FluentValidation": "9.5.1",
           "Microsoft.EntityFrameworkCore.SqlServer": "3.1.11"
         },
         "compile": {
@@ -1622,6 +1649,24 @@
         "lib/netstandard2.1/Autofac.xml"
       ]
     },
+    "Autofac.Extensions.DependencyInjection/7.1.0": {
+      "sha512": "nm6rZREZ9tjdKXu9cmT69zHkZODagjCPlRRCOhiS1VqFFis9LQnMl18L4OYr8yfCW1WAQkFDD2CNaK/kF5Eqeg==",
+      "type": "package",
+      "path": "autofac.extensions.dependencyinjection/7.1.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "autofac.extensions.dependencyinjection.7.1.0.nupkg.sha512",
+        "autofac.extensions.dependencyinjection.nuspec",
+        "icon.png",
+        "lib/netstandard2.0/Autofac.Extensions.DependencyInjection.dll",
+        "lib/netstandard2.0/Autofac.Extensions.DependencyInjection.pdb",
+        "lib/netstandard2.0/Autofac.Extensions.DependencyInjection.xml",
+        "lib/netstandard2.1/Autofac.Extensions.DependencyInjection.dll",
+        "lib/netstandard2.1/Autofac.Extensions.DependencyInjection.pdb",
+        "lib/netstandard2.1/Autofac.Extensions.DependencyInjection.xml"
+      ]
+    },
     "Autofac.Extras.DynamicProxy/6.0.0": {
       "sha512": "Z86ZX33qYZ09xhdnYEyD/xilGUQBiITSAdHVZw59Qb+bN+tN/WFVDBZGQZZnI3+l8+hdjM2zWdcK4sgUEavRzw==",
       "type": "package",
@@ -1663,6 +1708,24 @@
         "lib/netstandard1.5/Castle.Core.dll",
         "lib/netstandard1.5/Castle.Core.xml",
         "readme.txt"
+      ]
+    },
+    "FluentValidation/9.5.1": {
+      "sha512": "By09e2m4N3giD7Giq8NCFgkgN5Hkm8Lv/bk8AadD9Xc6jjj2WDGrD6l9keZbWbkO9aygiHQREIt47iS2sVSU7w==",
+      "type": "package",
+      "path": "fluentvalidation/9.5.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "fluent-validation-icon.png",
+        "fluentvalidation.9.5.1.nupkg.sha512",
+        "fluentvalidation.nuspec",
+        "lib/net461/FluentValidation.dll",
+        "lib/net461/FluentValidation.xml",
+        "lib/net5.0/FluentValidation.dll",
+        "lib/net5.0/FluentValidation.xml",
+        "lib/netstandard2.0/FluentValidation.dll",
+        "lib/netstandard2.0/FluentValidation.xml"
       ]
     },
     "Microsoft.Bcl.AsyncInterfaces/1.1.1": {

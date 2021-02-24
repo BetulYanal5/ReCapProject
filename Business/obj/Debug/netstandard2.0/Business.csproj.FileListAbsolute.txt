@@ -13,3 +13,4 @@ C:\Users\Betul\source\repos\ReCapProject\Business\obj\Debug\netstandard2.0\Busin
 C:\Users\Betul\source\repos\ReCapProject\Business\obj\Debug\netstandard2.0\Business.pdb
 C:\Users\Betul\source\repos\ReCapProject\Business\bin\Debug\netstandard2.0\Core.dll
 C:\Users\Betul\source\repos\ReCapProject\Business\bin\Debug\netstandard2.0\Core.pdb
+C:\Users\Betul\source\repos\ReCapProject\Business\obj\Debug\netstandard2.0\Business.csproj.CoreCompileInputs.cache

@@ -8,6 +8,8 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.AspNetCore.Http;
 using Autofac.Extensions.DependencyInjection;
+using Autofac;
+using Business.DependencyResolvers.Autofac;
 
 namespace WebAPI
 {
@@ -21,6 +23,10 @@ namespace WebAPI
         public static IHostBuilder CreateHostBuilder(string[] args) =>
             Host.CreateDefaultBuilder(args)
                 .UseServiceProviderFactory(new AutofacServiceProviderFactory())
+                .ConfigureContainer<ContainerBuilder>(builder=> 
+                {
+                    builder.RegisterModule(new AutofacBusinessModul());//.netcore yerine baþka bir IoC container kullanmak istenildiðinde
+                })
                 .ConfigureWebHostDefaults(webBuilder =>
                 {
                     webBuilder.UseStartup<Startup>();

@@ -1,12 +1,14 @@
 {
   "version": 2,
-  "dgSpecHash": "DKd4jIijsuhbOWrBZpBMfHWHC+se37GKF+gPPZVj60hvg/5EcPV0Gl4O+5SSgSoEcSqYUBvfAkXX+rgDbX2C3w==",
+  "dgSpecHash": "OZPLju2R5CQwWSB32xXjNfLDkhePBAWW9BaWbu7rMCinDz8ojO85e5G2tWioyAP7Brby6ShS15ehZho7YrpBwA==",
   "success": true,
   "projectFilePath": "C:\\Users\\Betul\\source\\repos\\ReCapProject\\Business\\Business.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Betul\\.nuget\\packages\\autofac\\6.1.0\\autofac.6.1.0.nupkg.sha512",
+    "C:\\Users\\Betul\\.nuget\\packages\\autofac.extensions.dependencyinjection\\7.1.0\\autofac.extensions.dependencyinjection.7.1.0.nupkg.sha512",
     "C:\\Users\\Betul\\.nuget\\packages\\autofac.extras.dynamicproxy\\6.0.0\\autofac.extras.dynamicproxy.6.0.0.nupkg.sha512",
     "C:\\Users\\Betul\\.nuget\\packages\\castle.core\\4.4.0\\castle.core.4.4.0.nupkg.sha512",
+    "C:\\Users\\Betul\\.nuget\\packages\\fluentvalidation\\9.5.1\\fluentvalidation.9.5.1.nupkg.sha512",
     "C:\\Users\\Betul\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.1\\microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
     "C:\\Users\\Betul\\.nuget\\packages\\microsoft.bcl.hashcode\\1.1.1\\microsoft.bcl.hashcode.1.1.1.nupkg.sha512",
     "C:\\Users\\Betul\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",

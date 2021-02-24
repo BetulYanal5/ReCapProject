@@ -1,9 +1,13 @@
 ﻿using Business.Abstract;
 using Business.Constants;
+using Business.ValidationRules.FluentValidation;
+using Core.Aspects.Autofac.Validation;
+using Core.CrossCuttingConcerns.Validation;
 using Core.Utilities.Results;
 using DataAccess.Abstract;
 using Entities.Concrete;
 using Entities.DTOs;
+using FluentValidation;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -14,22 +18,19 @@ namespace Business.Concrete
     {
         ICarDal _CarDal;
 
+       
         public CarManager(ICarDal carDal)//ConsoleUI'da CarManager new yapıldığı anda burası çalışır(constructor)
         {                                //Böylece oluşturmuş olduğum InMemoryCarDal veritabanına bağımlı olmam
             _CarDal = carDal;
         }
 
+       [ValidationAspect(typeof(CarValidator))]
         public IResult Add(Car car)
         {
-            if ((car.DailyPrice > 0)&&(car.CarName.Length>=2))
-            {
+               
                _CarDal.Add(car);
                 return new SuccessResult(Messages.Added);
-            }
-            else
-            {
-                return new ErrorResult(Messages.CarNameInvalid);
-            }
+           
         }
 
         public IResult Delete(Car car)
