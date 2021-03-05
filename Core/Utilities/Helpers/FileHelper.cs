@@ -11,17 +11,18 @@ namespace Core.Utilities.Helpers
     {
         public static string Add(IFormFile file)
         {
-            var sourcepath = Path.GetTempFileName();
-            if (file.Length > 0)
+            var result = newPath(file);
+            var sourcePath = Path.GetTempFileName();
+                if (file.Length > 0)
             {
-                using (var stream= new FileStream(sourcepath,FileMode.Create))
+                using (var stream= new FileStream(sourcePath,FileMode.Create))
                 {
                     file.CopyTo(stream);
                 }
             }
 
-             var result = newPath(file);
-             File.Move(sourcepath, result);
+             
+             File.Move(sourcePath, result);
              return result;
 
         }
@@ -49,15 +50,15 @@ namespace Core.Utilities.Helpers
             {
                 return new ErrorResult(exception.Message);
             }
-            return new SuccessResult();
+            return new SuccessResult(); 
         }
 
         public static string newPath(IFormFile file)
         {
             FileInfo fileInfo = new FileInfo(file.FileName);
             string fileExtension = fileInfo.Extension;
-            string path = Environment.CurrentDirectory + @"\Images";
-            var newPath = Guid.NewGuid().ToString() + "_"+DateTime.Now.Day+ "_" + DateTime.Now.Month + "_" + DateTime.Now.Year + fileExtension;
+            string path = Environment.CurrentDirectory + @"\wwwroot\Images\";
+            var newPath = Guid.NewGuid().ToString() + fileExtension;
             string result = $@"{path}\{newPath}";
             return result;
 

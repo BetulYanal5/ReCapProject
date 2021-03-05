@@ -14,5 +14,6 @@ namespace Business.Constants
         public static string MaintenanceTime = "Sistem bakımda";
         public static string RentalError = "Araç şu anda kullanımda olduğu için kiralanamaz,başka bir tarih için deneyin";
         public static string RentalTimeError = "Geçersiz tarih girildi";
+        public static string ImageLimitExceded="En fazla 5 fotoğraf olabilir";
     }
 }
