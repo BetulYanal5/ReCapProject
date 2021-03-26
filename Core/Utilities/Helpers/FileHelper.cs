@@ -13,7 +13,7 @@ namespace Core.Utilities.Helpers
         {
             var result = newPath(file);
             var sourcePath = Path.GetTempFileName();
-                if (file.Length > 0)
+            if (file.Length > 0)
             {
                 using (var stream= new FileStream(sourcePath,FileMode.Create))
                 {
