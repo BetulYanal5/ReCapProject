@@ -1,5 +1,6 @@
 ﻿using Business.Concrete;
 using Business.Constants;
+using Core.Entities.Concrete;
 using DataAccess.Concrete.EntityFramework;
 using DataAccess.Concrete.InMemory;
 using Entities.Concrete;
@@ -148,17 +149,17 @@ namespace ConsoleUI
             rentalManager.Add(rental);
         }
 
-        private static void AddUser()
-        {
-            UserManager userManager = new UserManager(new EfUserDal());
-            string firstName = Console.ReadLine();
-            string lastName = Console.ReadLine();
-            string email = Console.ReadLine();
-            string password = Console.ReadLine();
-            User user = new User { FirstName = firstName, LastName = lastName, Email = email, Password = password };
-            userManager.Add(user);
-            Console.WriteLine(Messages.Added);
-        }
+        //private static void AddUser()
+        //{
+        //    UserManager userManager = new UserManager(new EfUserDal());
+        //    string firstName = Console.ReadLine();
+        //    string lastName = Console.ReadLine();
+        //    string email = Console.ReadLine();
+        //    string password = Console.ReadLine();
+        //    User user = new User { FirstName = firstName, LastName = lastName, Email = email, Password = password };
+        //    userManager.Add(user);
+        //    Console.WriteLine(Messages.Added);
+        //}
 
     }
 }

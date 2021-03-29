@@ -1,4 +1,5 @@
 ﻿using Business.Abstract;
+using Business.BusinessAspects.Autofac;
 using Business.Constants;
 using Business.ValidationRules.FluentValidation;
 using Core.Aspects.Autofac.Validation;
@@ -23,8 +24,8 @@ namespace Business.Concrete
         {                                //Böylece oluşturmuş olduğum InMemoryCarDal veritabanına bağımlı olmam
             _CarDal = carDal;
         }
-
-       [ValidationAspect(typeof(CarValidator))]
+        [SecuredOperation("car.add,admin")]
+        [ValidationAspect(typeof(CarValidator))]
         public IResult Add(Car car)
         {
                
@@ -41,7 +42,7 @@ namespace Business.Concrete
 
         public IDataResult<List<Car>> GetAll()//İş sınıfı başka sınıfları newlemez yoksa bağımlı olur
         {
-            if (DateTime.Now.Hour == 22)
+            if (DateTime.Now.Hour == 1)
             {
                 return new ErrorDataResult<List<Car>>(Messages.MaintenanceTime);
             }
