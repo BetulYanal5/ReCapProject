@@ -62,7 +62,7 @@ namespace Business.Concrete
         [CacheAspect]
         public IDataResult<List<Car>> GetAll()//İş sınıfı başka sınıfları newlemez yoksa bağımlı olur
         {
-            if (DateTime.Now.Hour == 1)
+            if (DateTime.Now.Hour == 5)
             {
                 return new ErrorDataResult<List<Car>>(Messages.MaintenanceTime);
             }

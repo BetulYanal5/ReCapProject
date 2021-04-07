@@ -17,6 +17,8 @@ namespace DataAccess.Concrete.EntityFramework
         {
             using (ReCapContext context=new ReCapContext())
             {
+
+
                 var result = from c in context.Cars
                              join b in context.Brands
                              on c.BrandId equals b.BrandId
@@ -24,7 +26,7 @@ namespace DataAccess.Concrete.EntityFramework
                              on c.ColorId equals cl.ColorId
                              select new CarDetailDto
                              {
-                                 CarName =c.CarName,
+                                 CarName = c.CarName,
                                  BrandName = b.BrandName,
                                  ColorName = cl.ColorName,
                                  DailyPrice = c.DailyPrice
