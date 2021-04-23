@@ -10,8 +10,8 @@ namespace Business.Abstract
 {
    public interface ICarService:ICrudService<Car>
     {
-        IDataResult<List<Car>> GetCarsByBrandId(int Id);
-        IDataResult<List<Car>> GetCarsByColorId(int Id);
+        IDataResult<List<CarDetailDto>> GetCarsByBrandId(int Id);
+        IDataResult<List<CarDetailDto>> GetCarsByColorId(int Id);
         IDataResult<List<Car>> GetByDailyPrice(decimal min,decimal max);
         IDataResult<List<CarDetailDto>> GetCarDetails();
         IResult AddTransactionalTest(Car car);

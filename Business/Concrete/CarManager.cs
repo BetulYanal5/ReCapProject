@@ -14,6 +14,7 @@ using Entities.DTOs;
 using FluentValidation;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 
 namespace Business.Concrete
@@ -85,15 +86,17 @@ namespace Business.Concrete
         {
             return new SuccessDataResult<List<CarDetailDto>>(_CarDal.GetCarDetails());
         }
-
-        public IDataResult<List<Car>> GetCarsByBrandId(int Id)
+       
+        public IDataResult<List<CarDetailDto>> GetCarsByBrandId(int Id)
         {
-            return new SuccessDataResult<List<Car>>(_CarDal.GetAll(c => c.BrandId == Id));
+            //return new SuccessDataResult<List<Car>>(_CarDal.GetCarDetails(c => c.BrandId == Id));
+            return new SuccessDataResult<List<CarDetailDto>>(_CarDal.GetCarDetails(c => c.BrandId == Id));
         }
 
-        public IDataResult<List<Car>> GetCarsByColorId(int Id)
+        public IDataResult<List<CarDetailDto>> GetCarsByColorId(int Id)
         {
-            return new SuccessDataResult<List<Car>>(_CarDal.GetAll(c => c.ColorId == Id));
+            return new SuccessDataResult<List<CarDetailDto>>(_CarDal.GetCarDetails(c => c.ColorId == Id));
+            //return new SuccessDataResult<List<Car>>(_CarDal.GetAll(c => c.ColorId == Id));
         }
         [CacheRemoveAspect("ICarService.Get")]
         [ValidationAspect(typeof(CarValidator))]
@@ -102,5 +105,6 @@ namespace Business.Concrete
             _CarDal.Update(car);
             return new SuccessResult(Messages.Updated);
         }
+
     }
 }
