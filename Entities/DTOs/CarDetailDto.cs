@@ -16,6 +16,5 @@ namespace Entities.DTOs
         public int ColorId { get; set; }
         public int ModelYear { get; set; }
         public List<string> ImagePath { get; set; }
-        //public string ImagePath { get; set; }
     }
 }
